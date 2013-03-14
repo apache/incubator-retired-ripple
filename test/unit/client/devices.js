@@ -23,6 +23,7 @@ describe("devices", function () {
         event = ripple('event'),
         platform = ripple('platform'),
         emulatorBridge = ripple('emulatorBridge'),
+        utils = ripple('utils'),
         bus = ripple('bus'),
         db = ripple('db');
 
@@ -33,8 +34,8 @@ describe("devices", function () {
         spyOn(platform, "current").andReturn({
             id: "web"
         });
+        spyOn(utils, "queryString").andReturn({});
         devices.initialize();
-
     });
 
     it("getDevice returns a copied device object", function () {
