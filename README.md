@@ -87,7 +87,7 @@ The `master` branch is the latest (stable) release. The `next` branch is where a
 
 If you like the project, and want to contribute code, please issue a pull request (on [GitHub](https://github.com/blackberry/Ripple-UI/pulls)) into the `next` branch.
 
-Note: You will need to be an [official contributor](http://blackberry.github.com/howToContribute.html) before your code can be accepted.
+Note: You will need to submit an Apache [ICLA](http://www.apache.org/licenses/#clas) (Individual Contributor License Agreement) for your contribution to be accepted.
 
 ## Code Guidelines
 
