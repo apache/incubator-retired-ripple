@@ -73,21 +73,13 @@ There is a command line interface that can be paired with the client (UI).
 
 It can be used for various things, such as statically hosting an application, and running a local (cross origin) XHR proxy.
 
-Eventually, this will be available on the NPM registry. For now (to install):
+To install:
 
-    git clone git@github.com:blackberry/Ripple-UI.git ripple
-    cd ripple
-    ./configure
-    jake
-    npm install -g .
+    npm install -g ripple-emulator
 
 This will install a global script called `ripple`. To see usage, run:
 
     ripple help
-
-Note: If you don't want to use NPM, you can just do this:
-
-    node bin/ripple help
 
 ## Contributing
 
