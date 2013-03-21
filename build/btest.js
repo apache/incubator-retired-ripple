@@ -58,7 +58,8 @@ module.exports = function () {
         return str;
     }, "");
 
-    doc = html.replace(/<!-- SPECS -->/g, specs).replace(/##FILES##/g, modules.js);
+    doc = html.split("<!-- SPECS -->").join(specs)
+              .split("##FILES##").join(modules.js);
 
     app.listen(3000);
 
