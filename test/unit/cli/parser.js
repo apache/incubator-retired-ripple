@@ -62,4 +62,21 @@ describe("cli", function () {
             }
         });
     });
+
+    it("can use map to change the value of the option", function () {
+        var multipleFlagsWithMultipleArgs = [
+            "cmd", "--a", "b", "c"
+        ];
+
+        parser.map("a", function () { return 12; });
+        parsed = parser.parse(basicArgs.concat(multipleFlagsWithMultipleArgs));
+
+        expect(parsed).toEqual({
+            commands: ["cmd"],
+            options: {
+                "a": 12
+            }
+        });
+        parser.map("a", null);
+    });
 });
