@@ -1,4 +1,11 @@
-## v0.9.1r54 - March 08, 2013
+## v0.9.16 - March 22, 2013
+
+* Added support for serve app from multiple folders
+* Fixed browser tests to run again
+* added device selection to enableRipple qs param
+* Skinned devices now have ther size devided by the css pixel ratio
+
+## v0.9.15 - March 08, 2013
 
 * Updated version to 0.9.15 due to republishing need on Chrome Store as per this issue: https://groups.google.com/a/chromium.org/forum/?fromgroups=#!topic/chromium-extensions/d56BP7CTU-M
 
