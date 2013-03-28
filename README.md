@@ -1,17 +1,7 @@
-# Ripple
+# Apache Ripple(tm)
 
 A browser based, platform agnostic mobile application development and testing tool.
  
-All source code (excluding third party libraries) are subject to:
-
-Copyright (c) 2011 Research In Motion Limited
-
-## License
-
-All assets in this repository, unless otherwise stated through sub-directory LICENSE or NOTICE files, are subject to the Apache Software License v.2.0.
-
-In particular, the assets under `assets/*/images` are excluded from the Apache Software License v.2.0.  Please see the [NOTICE](https://github.com/blackberry/Ripple-UI/tree/master/ssets/client/images) file for more details.
-
 ## Build Requirements
 
 * nodejs, npm
