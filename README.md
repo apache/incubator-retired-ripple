@@ -87,7 +87,4 @@ Note: You will need to submit an Apache [ICLA](http://www.apache.org/licenses/#c
 
 ## Reference Material &amp; Community
 
-You can also find associated reference material for the Ripple tool as well as contributor forums at the following locations.
-
-* [Blackberry Contributor Forums](http://supportforums.blackberry.com/t5/Ripple-Contributions/bd-p/ripple)
-* [Developer Documentation](https://github.com/apache/incubator-ripple/tree/master/doc)
+* [Project Site](http://ripple.incubator.apache.org)
