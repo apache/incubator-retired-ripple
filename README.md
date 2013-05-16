@@ -9,7 +9,7 @@ A browser based, platform agnostic mobile application development and testing to
 
 ## Getting Started
 
-If you plan to dive into the source, be sure to check out the [HACKING](https://github.com/blackberry/Ripple-UI/blob/master/HACKING.md) file.
+If you plan to dive into the source, be sure to check out the [HACKING](https://github.com/apache/incubator-ripple/blob/master/HACKING.md) file.
 
 To get started, you need to setup a few things, first- run (in the project root):
 
@@ -37,7 +37,7 @@ This will describe all the available commands for building and running the tests
 NOTE: For development you should be fine to just build with jake and refresh your browser.
 If you end up editing anything in the ext folder you will need to refresh the extension from the extension management page.
 
-For more information see [doc/chrome_extension.md](https://github.com/blackberry/Ripple-UI/blob/master/doc/chrome_extension.md).
+For more information see [doc/chrome_extension.md](https://github.com/apache/incubator-ripple/blob/master/doc/chrome_extension.md).
 
 ## Running Inside Other Web Browsers
 
@@ -75,7 +75,7 @@ This will install a global script called `ripple`. To see usage, run:
 
 The `master` branch is the latest (stable) release. The `next` branch is where all development happens.
 
-If you like the project, and want to contribute code, please issue a pull request (on [GitHub](https://github.com/blackberry/Ripple-UI/pulls)) into the `next` branch.
+If you like the project, and want to contribute code, please issue a pull request (on [GitHub](https://github.com/apache/incubator-ripple/pulls)) into the `next` branch.
 
 Note: You will need to submit an Apache [ICLA](http://www.apache.org/licenses/#clas) (Individual Contributor License Agreement) for your contribution to be accepted.
 
@@ -90,5 +90,4 @@ Note: You will need to submit an Apache [ICLA](http://www.apache.org/licenses/#c
 You can also find associated reference material for the Ripple tool as well as contributor forums at the following locations.
 
 * [Blackberry Contributor Forums](http://supportforums.blackberry.com/t5/Ripple-Contributions/bd-p/ripple)
-* [Developer Documentation](https://github.com/blackberry/Ripple-UI/tree/master/doc)
-
+* [Developer Documentation](https://github.com/apache/incubator-ripple/tree/master/doc)
