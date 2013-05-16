@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "connect": "2.3.6",
-    "jsdom": "0.2.14",
+    "jsdom": "0.6.x",
     "cssmin": "0.3.1",
     "html-minifier": "0.4.5",
     "jWorkflow": "0.x.x",
