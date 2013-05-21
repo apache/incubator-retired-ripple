@@ -1,0 +1,6 @@
+{
+  "name": "ripple-emulator",
+  "devDependencies": {
+      "jasmine": "1.3.x"
+  }
+}

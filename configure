@@ -19,4 +19,4 @@
 
 npm install -g jake jshint csslint uglify-js
 npm install
-git submodule update --init
+./node_modules/.bin/bower install

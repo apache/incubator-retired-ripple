@@ -91,7 +91,6 @@
     },
 
     "node" : true,
-    "es5" : true,
     "browser" : false,
 
     "boss" : false,

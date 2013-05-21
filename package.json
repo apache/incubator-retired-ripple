@@ -42,7 +42,8 @@
     "html-minifier": "0.4.5",
     "jWorkflow": "0.x.x",
     "xmlhttprequest": "1.4.2",
-    "coverjs": "0.0.14"
+    "coverjs": "0.0.14",
+    "bower": "0.9.x"
   },
   "files": [
     "README.md",
