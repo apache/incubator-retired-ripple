@@ -1,3 +1,10 @@
+## v0.9.17 - May 30, 2013
+
+* Fixed Ripple load bug for default load param in CLI
+* Updated license headers
+* Updated jsDOM dependencies
+* Updated jasmine loading from submodules to using Bower
+
 ## v0.9.16 - March 22, 2013
 
 * Added support for serve app from multiple folders
