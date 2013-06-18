@@ -248,7 +248,7 @@ pull request can be found here: https://github.com/blackberry/Ripple-UI/pull/563
 * (Fix) [WebWorks] bb.invoke.invoke launches undefined application for CameraArguments
 * (Fix) [WebWorks] sms.isListeningForMessage should be settable
 * (Fix) [WebWorks] bb.app issues
-* (Fix) [WebWokrs] bb.ui.menu issues
+* (Fix) [WebWorks] bb.ui.menu issues
 * (Fix) [PhoneGap] When successfully removing a contact, a list of contacts is incorrectly returned
 * (Fix) [PhoneGap] When saving a contact, the returned list is incorrect
 * (Fix) [WebWorks-TabletOS] bb.invoke Browser: URLs do not support certain protocols
