@@ -62,8 +62,8 @@ describe("console", function () {
 
         it("uses the prefix when erroring", function () {
             spyOn(console, "error");
-            _console.error("Carebears Stare");
-            expect(console.error).toHaveBeenCalledWith("PLATFORM :: Carebears Stare");
+            _console.error("Care Bear Stare");
+            expect(console.error).toHaveBeenCalledWith("PLATFORM :: Care Bear Stare");
         });
 
         it("uses the prefix when warning", function () {
