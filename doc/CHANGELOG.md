@@ -10,7 +10,7 @@
 * Added support for serve app from multiple folders
 * Fixed browser tests to run again
 * added device selection to enableRipple qs param
-* Skinned devices now have ther size devided by the css pixel ratio
+* Skinned devices now have ther size divided by the css pixel ratio
 
 ## v0.9.15 - March 08, 2013
 
