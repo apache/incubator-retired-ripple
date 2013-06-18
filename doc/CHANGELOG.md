@@ -64,7 +64,7 @@ Pull Request (for release commits): https://github.com/blackberry/Ripple-UI/pull
 * Fixed Ripple sending bad Accept (or other) headers to servers (in BlackBerry distribution of Ripple)
 * Fixed the Accelerometer UI when it would stop modifying Alpha values after resetting all values (by double clicking on the UI)
 * Fixed the sizing of the image (overlay) that shows up after selecting image (for an emulated Camera capture call) to fit inside the overlay window
-* Fixed the platform selection page that shows up at first run displaying over top of the EULA (in the BlackBerry distrobution)
+* Fixed the platform selection page that shows up at first run displaying over top of the EULA (in the BlackBerry distribution)
 * Updated the "Stay On This Page" dialog to only show up when page enters reload loop (vs every refresh)
 
 * WebWorks BB10
