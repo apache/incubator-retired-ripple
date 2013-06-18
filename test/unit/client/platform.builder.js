@@ -165,7 +165,7 @@ describeBrowser("platform builder", function () {
 
         spyOn(app, "getInfo").andReturn({
             features: {
-                hampsters: {}
+                hamsters: {}
             }
         });
 
@@ -174,7 +174,7 @@ describeBrowser("platform builder", function () {
                 feature: "chickens",
                 children: {
                     bar: {
-                        feature: "hampsters"
+                        feature: "hamsters"
                     }
                 }
             }
@@ -197,7 +197,7 @@ describeBrowser("platform builder", function () {
                 feature: "chickens",
                 children: {
                     Smith: {
-                        feature: "hampsters"
+                        feature: "hamsters"
                     }
                 }
             }

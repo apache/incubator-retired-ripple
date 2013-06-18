@@ -10,7 +10,7 @@
 * Added support for serve app from multiple folders
 * Fixed browser tests to run again
 * added device selection to enableRipple qs param
-* Skinned devices now have ther size devided by the css pixel ratio
+* Skinned devices now have ther size divided by the css pixel ratio
 
 ## v0.9.15 - March 08, 2013
 
@@ -34,7 +34,7 @@ Pull Request (for release commits): https://github.com/blackberry/Ripple-UI/pull
 * Added support for Blackberry Q10 device
 * Added support for OPTIONS verb for Cross Origin Proxy
 * Added JavaScript console clearing prior to bootup (Chrome v23+ only)
-* Fixed blobBuilder being depricated (community contribution by @maxme)
+* Fixed blobBuilder being deprecated (community contribution by @maxme)
 
 ## v0.9.12 - January 14, 2013
 
@@ -64,7 +64,7 @@ Pull Request (for release commits): https://github.com/blackberry/Ripple-UI/pull
 * Fixed Ripple sending bad Accept (or other) headers to servers (in BlackBerry distribution of Ripple)
 * Fixed the Accelerometer UI when it would stop modifying Alpha values after resetting all values (by double clicking on the UI)
 * Fixed the sizing of the image (overlay) that shows up after selecting image (for an emulated Camera capture call) to fit inside the overlay window
-* Fixed the platform selection page that shows up at first run displaying over top of the EULA (in the BlackBerry distrobution)
+* Fixed the platform selection page that shows up at first run displaying over top of the EULA (in the BlackBerry distribution)
 * Updated the "Stay On This Page" dialog to only show up when page enters reload loop (vs every refresh)
 
 * WebWorks BB10
@@ -175,7 +175,7 @@ pull request can be found here: https://github.com/blackberry/Ripple-UI/pull/563
 
 * Added whitelisting support for blackberry.event event registration
 * Added support for window.orientation for WebWorks
-* Updated blackberry.ui.dialoge to asynch
+* Updated blackberry.ui.dialog to async
 * Added support for network connection type for WebWorks BB10
 * Added support for connectionchange event for WebWorks BB10
 * Added support for blackberry.device.version for WebWorks BB10
@@ -248,7 +248,7 @@ pull request can be found here: https://github.com/blackberry/Ripple-UI/pull/563
 * (Fix) [WebWorks] bb.invoke.invoke launches undefined application for CameraArguments
 * (Fix) [WebWorks] sms.isListeningForMessage should be settable
 * (Fix) [WebWorks] bb.app issues
-* (Fix) [WebWokrs] bb.ui.menu issues
+* (Fix) [WebWorks] bb.ui.menu issues
 * (Fix) [PhoneGap] When successfully removing a contact, a list of contacts is incorrectly returned
 * (Fix) [PhoneGap] When saving a contact, the returned list is incorrect
 * (Fix) [WebWorks-TabletOS] bb.invoke Browser: URLs do not support certain protocols

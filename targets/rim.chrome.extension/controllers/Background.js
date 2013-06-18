@@ -61,7 +61,7 @@ tinyHippos.Background = (function () {
         xhr.send();
 
         chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
-            var xhr, postData, data, plugini, eula;
+            var xhr, postData, data, eula;
             switch (request.action) {
             case "isEnabled":
                 console.log("isEnabled? ==> " + request.tabURL);

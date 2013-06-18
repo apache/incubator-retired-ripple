@@ -13,7 +13,7 @@
   }],
   "repository": {
     "type": "git",
-    "url": "https://git-wip-us.apache.org/repos/asf/icubator-ripple.git"
+    "url": "https://git-wip-us.apache.org/repos/asf/incubator-ripple.git"
   },
   "keywords": [
     "cordova",

@@ -38,7 +38,7 @@ describe("Cordova 2.0.0 Notification Bridge", function () {
             expect(notification.alert).toThrow();
         });
 
-        it("can be called wihtout specifying an error callback", function () {
+        it("can be called without specifying an error callback", function () {
             notification.alert(s, null, ["Test notification"]);
             expect(notifications.openNotification).toHaveBeenCalled();
             expect(notifications.openNotification.mostRecentCall.args[1]).toEqual("Test notification");
