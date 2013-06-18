@@ -175,7 +175,7 @@ pull request can be found here: https://github.com/blackberry/Ripple-UI/pull/563
 
 * Added whitelisting support for blackberry.event event registration
 * Added support for window.orientation for WebWorks
-* Updated blackberry.ui.dialoge to asynch
+* Updated blackberry.ui.dialoge to async
 * Added support for network connection type for WebWorks BB10
 * Added support for connectionchange event for WebWorks BB10
 * Added support for blackberry.device.version for WebWorks BB10
