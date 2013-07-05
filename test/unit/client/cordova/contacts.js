@@ -21,16 +21,16 @@
 describe("Cordova Contacts Bridge", function () {
     var contacts = ripple('platform/cordova/2.0.0/bridge/contacts'),
         emulatorBridge = ripple('emulatorBridge'),
-    db = ripple('db'),
-    contact = {
-        "name": { formatted: "Mark Dineen" },
-        "id": Math.uuid(undefined, 16),
-        "displayName": "Mark Dineen",
-        "emails": [{ type: "work", value: "mddineen@gmail.com", pref: false }]
-    },
-    s,
-    e,
-    _default = [{
+        db = ripple('db'),
+        contact = {
+            "name": { formatted: "Mark Dineen" },
+            "id": Math.uuid(undefined, 16),
+            "displayName": "Mark Dineen",
+            "emails": [{ type: "work", value: "mddineen@gmail.com", pref: false }]
+        },
+        s,
+        e,
+        _default = [{
             "name": { formatted: "Brent Lintner" },
             "displayName": "Brent Lintner",
             "emails": [{ type: "work", value: "brent@tinyhippos.com", pref: false }]
