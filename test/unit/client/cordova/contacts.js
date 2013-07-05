@@ -20,6 +20,7 @@
  */
 describe("Cordova Contacts Bridge", function () {
     var contacts = ripple('platform/cordova/2.0.0/bridge/contacts'),
+        emulatorBridge = ripple('emulatorBridge'),
     db = ripple('db'),
     contact = {
         "name": { formatted: "Mark Dineen" },
@@ -49,24 +50,21 @@ describe("Cordova Contacts Bridge", function () {
             "name": { formatted: "Mark McArdle" },
             "displayName": "Mark McArdle",
             "emails": [{ type: "work", value: "mark@tinyhippos.com", pref: false }]
-        }],
-    navi;
+        }];
 
     beforeEach(function () {
-        navi = global.navigator;
         s = jasmine.createSpy("success");
         e = jasmine.createSpy("error");
-        global.navigator = {
-            contacts: {
-                create: jasmine.createSpy("navigator.contacts.create").andCallFake(function (obj) {
-                    return obj;
-                })
-            }
-        };
-    });
 
-    afterEach(function () {
-        global.navigator = navi;
+        spyOn(emulatorBridge, 'window').andReturn({
+            navigator: {
+                contacts: {
+                    create: jasmine.createSpy("navigator.contacts.create").andCallFake(function (obj) {
+                        return obj;
+                    })
+                }
+            }
+        });
     });
 
     describe("on search", function () {
