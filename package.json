@@ -25,7 +25,6 @@
     "emulator"
   ],
   "bin": { "ripple": "./bin/ripple" },
-  "scripts": {"preinstall": "node thirdparty/ludicrous.js"},
   "main": "./lib/index",
   "dependencies": {
     "express": "3.1.0",
@@ -53,7 +52,6 @@
     "lib/cli",
     "assets/server",
     "pkg/hosted",
-    "thirdparty/ludicrous.js",
     "doc",
     "bin"
   ],
