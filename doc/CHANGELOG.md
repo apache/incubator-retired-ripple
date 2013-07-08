@@ -1,3 +1,14 @@
+## v0.9.18 - July 8, 2013
+
+Pre-install script (on Windows) causes failure to install via npm
+The PATCH HTTP method is not supported by the XHR proxy
+`ripple emulate` should allow static server to 404 if html is not found
+Fixing Contacts API for correct functioning with cordova versions later than 2.2.0
+Implemented confirm function in notification js for Cordova
+Fixed touchend touches and targetTouches
+Fixed `response` spelling in JSONP XHR proxy
+General spelling fixes
+
 ## v0.9.17 - May 30, 2013
 
 * Fixed Ripple load bug for default load param in CLI
