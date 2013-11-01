@@ -25,7 +25,6 @@ var fs = require('fs'),
     clean = require('./clean'),
     _c = require('./conf'),
     compress = require('./compress'),
-    chromeExt = require('./targets/chrome.extension'),
     hosted = require('./targets/hosted');
 
 function _done(error) {
@@ -54,19 +53,8 @@ module.exports = _handle(function (ext, opts) {
     opts = opts || {};
 
     var build = jWorkflow.order(clean)
-                         .andThen(pack);
-
-    switch (ext) {
-    case 'chrome.extension':
-        build.andThen(chromeExt);
-        break;
-    case 'hosted':
-        build.andThen(hosted);
-        break;
-    default:
-        build.andThen(chromeExt)
-             .andThen(hosted);
-    }
+                         .andThen(pack)
+                         .andThen(hosted);
 
     if (opts.compress) {
         build.andThen(compress);
