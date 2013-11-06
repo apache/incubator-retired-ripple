@@ -27,18 +27,6 @@ This will build ripple to the `pkg/` folder. In that folder there are various ta
 
 This will describe all the available commands for building and running the tests, etc.
 
-## Running As A Chrome Extension
-
-* Go to the extension management page (chrome://chrome/extensions/) in chrome.
-* Ensure that you have selected the developer mode checkbox.
-* Click the Load Unpacked extension button.
-* Select the `pkg/chrome.extension` folder.
-
-NOTE: For development you should be fine to just build with jake and refresh your browser.
-If you end up editing anything in the ext folder you will need to refresh the extension from the extension management page.
-
-For more information see [doc/chrome_extension.md](https://github.com/apache/incubator-ripple/blob/master/doc/chrome_extension.md).
-
 ## Running Inside Other Web Browsers
 
 Ripple is (by-design) browser agnostic, and _should_ be able to run inside any web browser.

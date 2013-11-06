@@ -1,3 +1,10 @@
+## V0.8.19 - Nov 5, 2013
+
+* Added Support for Cordova 3.0
+* Fixed building on windows
+* Removed BlackBerry Device Skins
+* Removed BlackBerry specific code
+
 ## v0.9.18 - July 8, 2013
 
 Pre-install script (on Windows) causes failure to install via npm
