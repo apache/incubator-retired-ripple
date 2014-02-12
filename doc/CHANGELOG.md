@@ -1,4 +1,10 @@
-## V0.8.19 - Nov 5, 2013
+## v0.9.20 - Feb 12, 2014
+
+* Corrects issue where it can not find latest Cordova.
+* The license name does not conform to the SPDX standard.
+* Fixed RIPPLE-47:navigator.notification.confirm can not get correct index of button pressed.
+
+## v0.9.19 - Nov 5, 2013
 
 * Added Support for Cordova 3.0
 * Fixed building on windows
