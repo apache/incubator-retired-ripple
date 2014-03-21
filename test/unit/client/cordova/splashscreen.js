@@ -18,18 +18,23 @@
  * under the License.
  *
  */
-module.exports = {
-    "cordova": {
-        "1.0.0": ripple('platform/cordova/1.0.0/spec'),
-        "2.0.0": ripple('platform/cordova/2.0.0/spec'),
-        "3.0.0": ripple('platform/cordova/3.0.0/spec')
-    },
-    "webworks.bb10": { "1.0.0": ripple('platform/webworks.bb10/1.0.0/spec') },
-    "webworks.handset": { "2.0.0": ripple('platform/webworks.handset/2.0.0/spec') },
-    "webworks.tablet": { "2.0.0": ripple('platform/webworks.tablet/2.0.0/spec') },
-    "web": { "default": ripple('platform/web/default/spec') },
-    "get": function (name, version) {
-        var platform = module.exports[name] || {};
-        return (platform[version] || platform[Object.keys(platform)[0]]);
-    }
-};
+
+describe("Cordova splashscreen bridge", function () {
+    var splash = ripple('platform/cordova/3.0.0/bridge/splashscreen'),
+        ui = ripple('ui');
+
+    beforeEach(function () {
+        spyOn(ui, "showOverlay");
+        spyOn(ui, "hideOverlay");
+    });
+
+    it("shows the overlay on show", function () {
+        splash.show();
+        expect(ui.showOverlay).toHaveBeenCalledWith('splashscreen');
+    });
+
+    it("hides the overlay on hide", function () {
+        splash.hide();
+        expect(ui.hideOverlay).toHaveBeenCalledWith('splashscreen');
+    });
+});

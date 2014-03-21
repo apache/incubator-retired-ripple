@@ -18,18 +18,22 @@
  * under the License.
  *
  */
-module.exports = {
-    "cordova": {
-        "1.0.0": ripple('platform/cordova/1.0.0/spec'),
-        "2.0.0": ripple('platform/cordova/2.0.0/spec'),
-        "3.0.0": ripple('platform/cordova/3.0.0/spec')
-    },
-    "webworks.bb10": { "1.0.0": ripple('platform/webworks.bb10/1.0.0/spec') },
-    "webworks.handset": { "2.0.0": ripple('platform/webworks.handset/2.0.0/spec') },
-    "webworks.tablet": { "2.0.0": ripple('platform/webworks.tablet/2.0.0/spec') },
-    "web": { "default": ripple('platform/web/default/spec') },
-    "get": function (name, version) {
-        var platform = module.exports[name] || {};
-        return (platform[version] || platform[Object.keys(platform)[0]]);
-    }
-};
+describe("cordova vibrate bridge", function () {
+    var vibration = ripple('platform/cordova/3.0.0/bridge/vibration'),
+        goodVibrations = ripple('ui/plugins/goodVibrations');
+
+    beforeEach(function () {
+        spyOn(goodVibrations, "vibrateDevice");
+    });
+
+    it("can't be called with no args", function () {
+        expect(vibration.vibrate).toThrow();
+        expect(goodVibrations.vibrateDevice).not.toHaveBeenCalled();
+    });
+
+    it("can be called specifying milliseconds", function () {
+        var vibelength = 789;
+        vibration.vibrate(null, null, [vibelength]);
+        expect(goodVibrations.vibrateDevice).toHaveBeenCalledWith(vibelength);
+    });
+});

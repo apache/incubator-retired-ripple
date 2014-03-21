@@ -30,6 +30,7 @@ module.exports = function (opts) {
         panels = [],
         dialogs = [],
         thirdparty = [],
+        slash = !!process.platform.match(/^win/) ? "\\":"/",
         src = {
             info: JSON.parse(fs.readFileSync(_c.PACKAGE_JSON, "utf-8")),
             js: "",
@@ -89,7 +90,7 @@ module.exports = function (opts) {
     src.js += "window.ripple = ripple;\n";
 
     src.js += compile(lib, function (file, path) {
-        return "ripple.define('" + path.replace(_path.resolve(_c.LIB) + "/", "").replace(/\.js$/, '') +
+        return "ripple.define('" + path.replace(_path.resolve(_c.LIB) + slash, "").replace(/\.js$/, '').replace(/\\/g, "/") +
                "', function (ripple, exports, module) {\n" + file + "});\n";
     });
 

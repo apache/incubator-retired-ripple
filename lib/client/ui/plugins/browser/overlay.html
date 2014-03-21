@@ -1,4 +1,4 @@
-/*
+<!--
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -17,19 +17,21 @@
  * specific language governing permissions and limitations
  * under the License.
  *
- */
-module.exports = {
-    "cordova": {
-        "1.0.0": ripple('platform/cordova/1.0.0/spec'),
-        "2.0.0": ripple('platform/cordova/2.0.0/spec'),
-        "3.0.0": ripple('platform/cordova/3.0.0/spec')
-    },
-    "webworks.bb10": { "1.0.0": ripple('platform/webworks.bb10/1.0.0/spec') },
-    "webworks.handset": { "2.0.0": ripple('platform/webworks.handset/2.0.0/spec') },
-    "webworks.tablet": { "2.0.0": ripple('platform/webworks.tablet/2.0.0/spec') },
-    "web": { "default": ripple('platform/web/default/spec') },
-    "get": function (name, version) {
-        var platform = module.exports[name] || {};
-        return (platform[version] || platform[Object.keys(platform)[0]]);
-    }
-};
+-->
+<section id="inappbrowser" class="overlay-browser">
+    <h2>InAppBrowser Emulation</h2>
+    It is like a browser, only it is all up in your app
+    <h3>URL:</h3>
+    <blockquote id="browser-url">http://www.google.com</blockquote> 
+    <h3>TARGET:</h3>
+    <blockquote id="browser-target">_blank</blockquote>
+    <h3>OPTIONS:</h3>
+    <blockquote id="browser-options">{}</blockquote>
+    <h3 id="browser-inject-js-header">INJECTED JAVASCRIPT:</h3>
+    <pre id="browser-inject-js"></pre>
+    <h3 id="browser-inject-css-header">INJECTED CSS:</h3>
+    <pre id="browser-inject-css"></pre>
+    <button id="browser-close" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only small-button">
+        <span class="ui-button-text">Close</span>
+    </button>
+</section>
