@@ -49,6 +49,7 @@ module.exports = {
         "../node_modules/moment/lang/fr-ca.js",
         "../node_modules/moment/lang/fr.js",
         "../node_modules/moment/lang/de.js",
+        "../node_modules/moment/lang/ru.js",
         "../node_modules/accounting/accounting.js"
     ]
 };
