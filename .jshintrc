@@ -100,7 +100,7 @@
     "evil": false,
     "devel": true,
     "debug": false,
-    "eqeqeq": true,
+    "eqeqeq": false,
     "forin": false,
     "immed": true,
     "laxbreak": false,
@@ -114,6 +114,6 @@
     "undef": true,
     "sub": true,
     "strict": false,
-    "unused": true,
+    "unused": "vars",
     "trailing": true
 }
