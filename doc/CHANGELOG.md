@@ -1,3 +1,18 @@
+## v0.9.22 - Apr 24, 2014
+
+* 21641ae - Addresses #45 - Firefox support related
+* 56cf7fc - fixes RIPPLE-58 [Image Capture] Image preview is not rendered.
+* 3271036 - Triple equals and unused function vars are too terse for this project.
+* 2ceb73c - Add initial support of ScanditSDK plugin.
+* ab2bccf - Add App.exitApp and App.overrideBackbutton methods support.
+* a88cd4c - Fix notifications, now support latest cordova api.
+* d1b9aa1 - Add russian language to locales name.
+
+## v0.9.21 - March 28, 2014
+
+* 4c4fffe - enable compatibility with phonegap.
+* 5a5f1e7 - fixes a simple camera bug.
+
 ## v0.9.20 - Feb 12, 2014
 
 * Corrects issue where it can not find latest Cordova.
