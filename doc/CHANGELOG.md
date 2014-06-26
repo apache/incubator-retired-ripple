@@ -1,3 +1,14 @@
+## v0.9.23 - Jun 26, 2014
+
+* RIPPLE-63 Ripple should default to local proxy, not remote
+  https://github.com/apache/incubator-ripple/pull/25
+
+* Fix RIPPLE-61: search for locally installed cordova module before expecting to find it globally installed
+  https://github.com/apache/incubator-ripple/pull/24
+
+* Fix RIPPLE-60 - proxy not detecting json properly
+  https://github.com/apache/incubator-ripple/pull/23
+
 ## v0.9.22 - Apr 24, 2014
 
 * 21641ae - Addresses #45 - Firefox support related
