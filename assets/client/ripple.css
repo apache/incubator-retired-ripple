@@ -334,7 +334,7 @@ section.left { left: 0; }
     right: 7px;
     top: 4px;
     opacity: 0.4;
-    cursor: pointer;
+    cursor: move;
 }
 
 .ui-sortable-highlight {
