@@ -78,7 +78,6 @@ describe("cordova inappbrowser bridge", function () {
         it("calls the win callback with exit on the browser-close event", function () {
             var win = jasmine.createSpy();
             iab.open(win, null, ["a", "b", "c"]);
-            console.log(event.once.mostRecentCall);
             event.once.mostRecentCall.args[1]();
             expect(win).toHaveBeenCalledWith({type: "exit", url: "a"});
         });
