@@ -1,3 +1,21 @@
+## v0.9.24 - Sept 25, 2014
+
+* RIPPLE-69: Adding cordova-3.6.x support
+  https://github.com/apache/incubator-ripple/pull/32
+
+* Changed daylight saving label
+  https://github.com/apache/incubator-ripple/pull/29
+
+* Changing cursor when there is an ability of moving tool panels
+  https://github.com/apache/incubator-ripple/pull/28
+
+* Adding BatteryStatus support
+  https://github.com/apache/incubator-ripple/pull/27
+
+* Adding build requirements for windows to README.md
+  https://github.com/apache/incubator-ripple/pull/26
+
+
 ## v0.9.23 - Jun 26, 2014
 
 * RIPPLE-63 Ripple should default to local proxy, not remote
