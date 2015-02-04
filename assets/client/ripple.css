@@ -1289,3 +1289,28 @@ fieldset {
     background-color: white;
 }
 /* END - RIPPLE-71 Barcode Scanner styles */
+
+/* START - RIPPLE-76 Warning for "Remote" proxy */
+#remote-proxy-warn {
+    padding: 5px;
+    border: 2px solid gold;
+}
+
+#remote-proxy-warn-message {
+    margin: 20px 0px -15px 0px;
+}
+
+.ui-warn-text-label {
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.remote-proxy-warn-icon-container {
+    color:  goldenrod;
+    float: left;
+}
+.remote-proxy-warn-icon-name {
+    position: absolute;
+    margin: 1px 0px 0px 20px;
+}
+/* END - RIPPLE-76 Warning for "Remote" proxy */

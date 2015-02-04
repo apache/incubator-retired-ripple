@@ -58,6 +58,19 @@
                 <td><select id="theme-select" class="ui-state-default ui-corner-all"></select></td>
             </tr>
         </table>
+        <section id="remote-proxy-warn" style="display: none">
+            <div class="remote-proxy-warn-icon-container">
+                <div class="remote-proxy-warn-icon-name ui-warn-text-label">Security Note</div>
+                <span class="ui-icon ui-icon-alert"></span>
+            </div>
+            <div id="remote-proxy-warn-message">
+                <h4>
+                    If the app is transferring sensitive data (authentication tokens, credentials etc.), it is strongly recommended  to use 
+                    <span class="ui-warn-text-label">Local</span> proxy instead of the 
+                    <span class="ui-warn-text-label">Remote</span> one.
+                </h4>
+            </div>
+        </section>
         <hr>
         <button id="options-menu-about" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
             <span class="ui-button-text">About Ripple Emulator</span>
