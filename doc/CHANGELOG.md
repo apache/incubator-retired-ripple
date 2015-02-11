@@ -19,6 +19,21 @@
 #
 -->
 
+## v0.9.25 - Feb 11, 2015
+
+* RIPPLE-76: Adding security warning for "Remote" proxy
+  https://github.com/apache/incubator-ripple/pull/37
+
+* RIPPLE 71: Adding BarcodeScanner plugin support
+  https://github.com/apache/incubator-ripple/pull/34
+
+* Fixed invalid call of db.save(...) if the default (local) proxy is set
+  https://github.com/apache/incubator-ripple/pull/35
+
+* Added missing cordova 3.0 action File.requestAllPaths and dummy nfc module
+  https://github.com/apache/incubator-ripple/pull/31
+
+
 ## v0.9.24 - Sept 25, 2014
 
 * RIPPLE-69: Adding cordova-3.6.x support
