@@ -47,7 +47,9 @@
   },
   "files": [
     "README.md",
+    "DISCLAIMER",
     "LICENSE",
+    "NOTICE",
     "lib/index.js",
     "lib/server",
     "lib/cli",
