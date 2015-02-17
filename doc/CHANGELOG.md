@@ -19,6 +19,11 @@
 #
 -->
 
+## v0.9.26 - Feb 17, 2015
+
+* RIPPLE-77: Need to include DISCLAIMER and NOTICE files in package
+  https://github.com/apache/incubator-ripple/pull/39
+
 ## v0.9.25 - Feb 11, 2015
 
 * RIPPLE-76: Adding security warning for "Remote" proxy
