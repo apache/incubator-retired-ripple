@@ -22,7 +22,7 @@
 # Apache Ripple(tm)
 
 A browser based, platform agnostic mobile application development and testing tool.
- 
+
 ## Build Requirements
 
 * OSX / Linux
