@@ -18,6 +18,10 @@
 # under the License.
 #
 -->
+## v0.9.27 - Mar 4, 2015
+
+* The ASF comments are showing up in cli help logs.
+  https://github.com/apache/incubator-ripple/pull/40
 
 ## v0.9.26 - Feb 17, 2015
 
