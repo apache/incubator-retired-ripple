@@ -18,6 +18,14 @@
 # under the License.
 #
 -->
+## v0.9.28 - Mar 5, 2015
+
+* RIPPLE-78 Unexpected prompt for App.messageChannel with Cordova 4.3.0
+  https://github.com/apache/incubator-ripple/pull/41
+
+* RIPPLE-79 Cordova Android platform 'App' service renamed 'CoreAndroid'
+  https://github.com/apache/incubator-ripple/pull/42
+
 ## v0.9.27 - Mar 4, 2015
 
 * The ASF comments are showing up in cli help logs.
