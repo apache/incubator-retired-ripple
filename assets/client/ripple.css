@@ -1297,7 +1297,7 @@ fieldset {
 }
 
 #remote-proxy-warn-message {
-    margin: 20px 0px -15px 0px;
+    margin: 20px 0 -15px 0;
 }
 
 .ui-warn-text-label {
@@ -1311,6 +1311,6 @@ fieldset {
 }
 .remote-proxy-warn-icon-name {
     position: absolute;
-    margin: 1px 0px 0px 20px;
+    margin: 1px 0 0 20px;
 }
 /* END - RIPPLE-76 Warning for "Remote" proxy */
