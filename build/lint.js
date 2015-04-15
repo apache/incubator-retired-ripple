@@ -26,7 +26,6 @@ function _spawn(proc, args, done) {
     function log(data) {
         process.stdout.write(new Buffer(data).toString("utf-8"));
     }
-
     var cmd = childProcess.spawn(proc, args);
 
     cmd.stdout.on('data', log);
@@ -38,13 +37,13 @@ function _spawn(proc, args, done) {
 }
 
 function _lintJS(files, done) {
-    _spawn('jshint', files, done);
+    _spawn((process.platform === 'win32') ? 'jshint.cmd' : 'jshint', files, done);
 }
 
 function _lintCSS(files, done) {
     var rules = JSON.parse(fs.readFileSync(_c.ROOT + ".csslintrc", "utf-8")),
         options = ["--errors=" + rules, "--format=compact", "--quiet"];
-    _spawn('csslint', files.concat(options), function (/*code*/) {
+    _spawn((process.platform === 'win32') ? 'csslint.cmd' : 'csslint', files.concat(options), function (/*code*/) {
         // TODO: There is a lingering CSS error that can not be turned off.
         //       Once fix, pass code back into this callback.
         done(0);

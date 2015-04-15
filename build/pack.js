@@ -27,14 +27,15 @@ module.exports = function (opts) {
     var lib = [],
         devicesCSS = [],
         overlays = [],
+        overlayStyles = [],
         panels = [],
         dialogs = [],
         thirdparty = [],
-        slash = !!process.platform.match(/^win/) ? "\\":"/",
         src = {
             info: JSON.parse(fs.readFileSync(_c.PACKAGE_JSON, "utf-8")),
             js: "",
             overlays: "",
+            overlayStyles: "",
             panels: "",
             dialogs: "",
             html: "",
@@ -63,6 +64,7 @@ module.exports = function (opts) {
     utils.collect(_c.LIB, lib);
     utils.collect(_c.DEVICES, devicesCSS, matches(".css"));
     utils.collect(_c.UI, overlays, matches("overlay.html"));
+    utils.collect(_c.UI, overlayStyles, matches("overlay.css"));
     utils.collect(_c.UI, panels, matches("panel.html"));
     utils.collect(_c.UI, dialogs, matches("dialog.html"));
 
@@ -78,6 +80,7 @@ module.exports = function (opts) {
     src.panels += compile(panels);
     src.dialogs += compile(dialogs);
     src.overlays += compile(overlays);
+    src.overlayStyles += compile(overlayStyles);
 
     if (!opts.noclosure) {
         src.js += "(function () {\n";
@@ -90,7 +93,7 @@ module.exports = function (opts) {
     src.js += "window.ripple = ripple;\n";
 
     src.js += compile(lib, function (file, path) {
-        return "ripple.define('" + path.replace(_path.resolve(_c.LIB) + slash, "").replace(/\.js$/, '').replace(/\\/g, "/") +
+        return "ripple.define('" + path.replace(_path.resolve(_c.LIB) + _path.sep, "").replace(/\.js$/, '').replace(/\\/g, '/') +
                "', function (ripple, exports, module) {\n" + file + "});\n";
     });
 

@@ -43,7 +43,7 @@ var quotes = [
     "Talk is cheap. Show me the code. - Linus Torvalds",
     "Perfection [in design] is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint-Exupery",
     "C is quirky, flawed, and an enormous success. - Dennis M. Ritchie.",
-    "In theory, theory and practice are the same. In practice, they're not. - Yoggi Berra",
+    "In theory, theory and practice are the same. In practice, they're not. - Yogi Berra",
     "You can't have great software without a great team, and most software teams behave like dysfunctional families. - Jim McCarthy",
     "PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil, perpetrated by skilled but perverted professionals. - Jon Ribbens",
     "Programming is like kicking yourself in the face, sooner or later your nose will bleed. - Kyle Woodbury",

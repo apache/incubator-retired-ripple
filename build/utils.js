@@ -29,7 +29,7 @@ _self = module.exports = {
         };
 
         if (fs.statSync(path).isDirectory()) {
-            fs.readdirSync(path).forEach(function (item) {
+            fs.readdirSync(path).sort().forEach(function (item) {
                 _self.collect(_path.join(path, item), files, matches);
             });
         } else if (matches(path)) {
