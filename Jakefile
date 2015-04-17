@@ -68,3 +68,7 @@ task('fixwhitespace', function() {
     }, complete);
 }, true);
 
+desc('creates an archive - jake archive[clean:<value>,sign:<value>,tag:<tagname>] or jake archive[help]');
+task('archive', [], function () {
+    require('./build/archive')(Array.prototype.slice.apply(arguments));
+});
