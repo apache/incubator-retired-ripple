@@ -92,7 +92,7 @@ describe("cordova globalization bridge", function () {
         });
 
         it("calls moment with the provided date", function () {
-            var date = new Date();
+            var date = args[0].date;
             glob.dateToString(success, fail, args);
             expect(moment).toHaveBeenCalledWith(date);
         });
