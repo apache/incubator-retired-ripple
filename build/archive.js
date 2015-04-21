@@ -229,8 +229,13 @@ function exec(cmdLine, baton, callback) {
     }
 
     child_process.exec(cmdLine, function (err, stdout, stderr) {
-        var err = err || stderr;
-        err && baton ? error(err, baton) : callback((stdout || '').trim(), err);
+        err = err || stderr;
+
+        if (err && baton) {
+            error(err, baton);
+        } else {
+            callback((stdout || '').trim(), err);
+        }
     });
 }
 
@@ -246,7 +251,7 @@ function error(msg, baton) {
         usage();
     }
 
-    baton && baton.drop({failed: true});
+    if (baton) { baton.drop({failed: true}); }
 }
 
 function usage(includeIntro) {
