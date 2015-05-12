@@ -72,3 +72,6 @@ desc('creates an archive - jake archive[clean:<value>,sign:<value>,tag:<tagname>
 task('archive', [], function () {
     require('./build/archive')(Array.prototype.slice.apply(arguments));
 });
+
+desc('Runs Apache RAT to audit source file license headers');
+task('rat', [], require('./build/rat'));

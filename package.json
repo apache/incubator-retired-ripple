@@ -44,7 +44,8 @@
     "jsdom": "3.1.0",
     "jWorkflow": "0.x.x",
     "semver": "^4.3.1",
-    "xmlhttprequest": "1.4.2"
+    "xmlhttprequest": "1.4.2",
+    "shelljs": "^0.4.0"
   },
   "files": [
     "README.md",
