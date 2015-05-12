@@ -18,67 +18,84 @@
 # under the License.
 #
 -->
+## v0.9.29 - May 12, 2015
+
+* RIPPLE-74 Ripple was not passing geolocation info to the app
+  <https://github.com/apache/incubator-ripple/pull/51>
+
+* Updated versions of jsdom and browserify so installs with Node 0.11.0 and above.
+  <https://github.com/apache/incubator-ripple/commit/1bb70121>
+
+* Updated minimum node version to 0.12.0 and minimum npm version to 2.5.1.
+  <https://github.com/apache/incubator-ripple/commit/b463abc5>
+
+* RIPPLE-80 Added 'jake archive' command to create Apache and npm archives/packages.
+  <https://github.com/apache/incubator-ripple/pull/45>
+
+* Added 'jake rat' command to run Apache RAT to verify license headers.
+  <https://github.com/apache/incubator-ripple/commit/7ba34149>
+
 ## v0.9.28 - Mar 5, 2015
 
 * RIPPLE-78 Unexpected prompt for App.messageChannel with Cordova 4.3.0
-  https://github.com/apache/incubator-ripple/pull/41
+  <https://github.com/apache/incubator-ripple/pull/41>
 
 * RIPPLE-79 Cordova Android platform 'App' service renamed 'CoreAndroid'
-  https://github.com/apache/incubator-ripple/pull/42
+  <https://github.com/apache/incubator-ripple/pull/42>
 
 ## v0.9.27 - Mar 4, 2015
 
 * The ASF comments are showing up in cli help logs.
-  https://github.com/apache/incubator-ripple/pull/40
+  <https://github.com/apache/incubator-ripple/pull/40>
 
 ## v0.9.26 - Feb 17, 2015
 
 * RIPPLE-77: Need to include DISCLAIMER and NOTICE files in package
-  https://github.com/apache/incubator-ripple/pull/39
+  <https://github.com/apache/incubator-ripple/pull/39>
 
 ## v0.9.25 - Feb 11, 2015
 
 * RIPPLE-76: Adding security warning for "Remote" proxy
-  https://github.com/apache/incubator-ripple/pull/37
+  <https://github.com/apache/incubator-ripple/pull/37>
 
 * RIPPLE 71: Adding BarcodeScanner plugin support
-  https://github.com/apache/incubator-ripple/pull/34
+  <https://github.com/apache/incubator-ripple/pull/34>
 
 * Fixed invalid call of db.save(...) if the default (local) proxy is set
-  https://github.com/apache/incubator-ripple/pull/35
+  <https://github.com/apache/incubator-ripple/pull/35>
 
 * Added missing cordova 3.0 action File.requestAllPaths and dummy nfc module
-  https://github.com/apache/incubator-ripple/pull/31
+  <https://github.com/apache/incubator-ripple/pull/31>
 
 
 ## v0.9.24 - Sept 25, 2014
 
 * RIPPLE-69: Adding cordova-3.6.x support
-  https://github.com/apache/incubator-ripple/pull/32
+  <https://github.com/apache/incubator-ripple/pull/32>
 
 * Changed daylight saving label
-  https://github.com/apache/incubator-ripple/pull/29
+  <https://github.com/apache/incubator-ripple/pull/29>
 
 * Changing cursor when there is an ability of moving tool panels
-  https://github.com/apache/incubator-ripple/pull/28
+  <https://github.com/apache/incubator-ripple/pull/28>
 
 * Adding BatteryStatus support
-  https://github.com/apache/incubator-ripple/pull/27
+  <https://github.com/apache/incubator-ripple/pull/27>
 
 * Adding build requirements for windows to README.md
-  https://github.com/apache/incubator-ripple/pull/26
+  <https://github.com/apache/incubator-ripple/pull/26>
 
 
 ## v0.9.23 - Jun 26, 2014
 
 * RIPPLE-63 Ripple should default to local proxy, not remote
-  https://github.com/apache/incubator-ripple/pull/25
+  <https://github.com/apache/incubator-ripple/pull/25>
 
 * Fix RIPPLE-61: search for locally installed cordova module before expecting to find it globally installed
-  https://github.com/apache/incubator-ripple/pull/24
+  <https://github.com/apache/incubator-ripple/pull/24>
 
 * Fix RIPPLE-60 - proxy not detecting json properly
-  https://github.com/apache/incubator-ripple/pull/23
+  <https://github.com/apache/incubator-ripple/pull/23>
 
 ## v0.9.22 - Apr 24, 2014
 
