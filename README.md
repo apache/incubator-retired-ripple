@@ -95,9 +95,7 @@ This will install a global script called `ripple`. To see usage, run:
 
 ## Contributing
 
-The `master` branch is the latest (stable) release. The `next` branch is where all development happens.
-
-If you like the project, and want to contribute code, please issue a pull request (on [GitHub](https://github.com/apache/incubator-ripple/pulls)) into the `next` branch.
+If you like the project, and want to contribute code, please issue a pull request (on [GitHub](https://github.com/apache/incubator-ripple/pulls)) into the `master` branch.
 
 Note: You will need to submit an Apache [ICLA](http://www.apache.org/licenses/#clas) (Individual Contributor License Agreement) for your contribution to be accepted.
 
