@@ -25,13 +25,21 @@ A browser based, platform agnostic mobile application development and testing to
 
 ## Build Requirements
 
+* Common
+  * `nodejs` (`v0.12.0` or higher)
+  * `npm` (`v2.5.1` or higher)
+  * `python` (`v2.7.3` recommended, `v3.x.x` is __not__ supported)
+    * [Windows download](http://www.python.org/download/releases/2.7.3#download)
+
 * OSX / Linux
-  * nodejs, npm
+    * `make`
+    * A C/C++ compiler toolchain, e.g. GCC
+
 * Windows
-  * nodejs, npm
-  * [Python](https://www.python.org/downloads/) (`v.2.7.x` recommended, `v.3.x.x` is not supported)
-  * Visual Studio 2010. The setup instructions can be found [here](https://github.com/brianmcd/contextify/wiki/Windows-Installation-Guide)
-  * Ripple uses [Bower](http://bower.io/) for js libraries managing. In order to use Bower on Windows, [msysgit](http://msysgit.github.io/) must be installed in a proper way - see Bower's [README.md](https://github.com/bower/bower#windows-users)
+  * Visual Studio 2010
+    * The setup instructions can be found [here](https://github.com/brianmcd/contextify/wiki/Windows-Installation-Guide)
+  * [msysgit](http://msysgit.github.io/)
+    * Ripple uses [Bower](http://bower.io/) for js libraries managing. In order to use Bower on Windows, [msysgit](http://msysgit.github.io/) must be installed in a proper way - see Bower's [README.md](https://github.com/bower/bower#windows-users)
 
 ## Getting Started
 
