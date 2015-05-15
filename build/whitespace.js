@@ -29,7 +29,7 @@ var fs = require('fs'),
     path = require("path"),
     rexp_minified = new RegExp("\\.min\\.js$"),
     rexp_src = new RegExp('\\.js$'),
-    _targets = ['lib'];
+    _targets = ['lib', 'build'];
 
 function forEachFile(root, cbFile, cbDone) {
     var count = 0;
@@ -81,7 +81,7 @@ function processWhiteSpace(processor, done) {
                 }
 
                 // eliminate trailing white space
-                src = src.replace(/ +\n/g, '\n');
+                src = src.replace(/[ ]+$/mg, '');
 
                 if (origsrc !== src) {
                     // write it out yo
