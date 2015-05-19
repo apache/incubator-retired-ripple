@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+/*global desc: false, task: false, complete: false, namespace: false */
 var fs = require('fs');
 
 desc("runs jake build");
@@ -27,7 +28,7 @@ task('build', [], require('./build/build'), true);
 desc("test and lint before building (with js compression)");
 task('deploy', [], require('./build/deploy'), true);
 
-desc("run all tests in node with an emulated dom - jake test [path1,path2]");
+desc("run all tests in node with an emulated dom - jake test [path]...");
 task('test', [], function () {
     require('./build/test')(arguments.length > 0 ? 
                 Array.prototype.slice.apply(arguments) : null);
@@ -43,9 +44,9 @@ namespace('test', function () {
 desc("boot test server for running all tests in the browser");
 task('btest', [], require('./build/btest'));
 
-desc("runs jshint + csslint - jake lint [path1] [path2]");
+desc("runs jshint + csslint - jake lint [path]...");
 task('lint', [], function () {
-    require('./build/lint')(complete, Array.prototype.slice.call(arguments));
+    require('./build/lint')(Array.prototype.slice.call(arguments));
 }, true);
 
 desc("show various codebase stats");

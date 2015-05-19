@@ -26,9 +26,9 @@ var lint = require('./lint'),
     fail = fs.readFileSync(_c.THIRDPARTY + "fail.txt", "utf-8");
 
 function ok(code) {
-    if (code || code === 1) {
+    if (code !== 0) {
         process.stdout.write(fail);
-        process.exit(1);
+        process.exit(code);
     }
 }
 
