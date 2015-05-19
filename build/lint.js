@@ -18,44 +18,64 @@
  * under the License.
  *
  */
-var childProcess = require('child_process'),
-    _c = require('./conf'),
+/*global jake: false, fail: false, complete: false */
+var _c = require('./conf'),
     fs = require('fs');
 
-function _spawn(proc, args, done) {
-    function log(data) {
-        process.stdout.write(new Buffer(data).toString("utf-8"));
-    }
-
-    var cmd = childProcess.spawn(proc, args);
-
-    cmd.stdout.on('data', log);
-    cmd.stderr.on('data', log);
-
-    if (done) {
-        cmd.on('exit', done);
-    }
+function _lintJSCommand(files) {
+    files = files.length ? files : ".";
+    return ["jshint"].concat(files).join(" ");
 }
 
-function _lintJS(files, done) {
-    _spawn('jshint', files, done);
-}
-
-function _lintCSS(files, done) {
-    var rules = JSON.parse(fs.readFileSync(_c.ROOT + ".csslintrc", "utf-8")),
+function _lintCSSCommand(files) {
+    var cssDirs = ["assets/client/ripple.css", "lib/client", "assets/server", "test"],
+        rules = JSON.parse(fs.readFileSync(_c.ROOT + ".csslintrc", "utf-8")),
         options = ["--errors=" + rules, "--format=compact", "--quiet"];
-    _spawn('csslint', files.concat(options), function (/*code*/) {
-        // TODO: There is a lingering CSS error that can not be turned off.
-        //       Once fix, pass code back into this callback.
-        done(0);
-    });
+    
+    files = files.length ? files : cssDirs;
+    return ["csslint"].concat(options).concat(files).join(" ");
 }
 
-module.exports = function (done, files) {
-    var cssDirs = ["assets/client/ripple.css", "lib/client", "assets/server", "test"];
-    _lintJS(files && files.length > 0 ? files : ["."], function (jscode) {
-        _lintCSS(files && files.length > 0 ? files : cssDirs, function (csscode) {
-            done((jscode === 0 && csscode === 0) ? 0 : 1);
+module.exports = function (files, done) {
+    if (typeof files === "function") {
+        done = files;
+        files = [];
+    }
+    if (typeof done === "undefined") {
+        // if we given no callback, use stub
+        done = function () {};
+    }
+    var job,
+        opts = {
+            printStdout: true,
+            printStderr: true,
+            breakOnError: false
+        },
+        doneCount = 0,
+        lintCode = 0,
+        lintErrorMessage = "";
+    
+    function bindEvents(job, command) {
+        job.addListener('error', function (msg, code) {
+            lintCode++;
+            lintErrorMessage += " " + command + " failed.";
         });
-    });
+        job.addListener('end', function () {
+            doneCount++;
+            /* both jshint and csslint are completed */
+            if (doneCount === 2) {
+                done(lintCode);
+                if (lintCode) {
+                    fail(lintErrorMessage.substring(1), lintCode);
+                } else {
+                    complete();
+                }
+            }
+        });
+    }
+
+    job = jake.exec(_lintJSCommand(files), opts);
+    bindEvents(job, "jshint");
+    job = jake.exec(_lintCSSCommand(files), opts);
+    bindEvents(job, "csslint");
 };
