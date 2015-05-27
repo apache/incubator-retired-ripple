@@ -18,6 +18,19 @@
 # under the License.
 #
 -->
+## v0.9.30 - May 27, 2015
+
+* RIPPLE-86 Changes to allow Ripple to launch in Internet Explorer and Edge browsers:
+  <https://github.com/apache/incubator-ripple/pull/60>
+
+* Further cleanup in LICENSE file:
+  <https://github.com/apache/incubator-ripple/pull/57> and
+  <https://github.com/apache/incubator-ripple/pull/58>
+
+* README.md updates:
+  <https://github.com/apache/incubator-ripple/pull/54> and
+  <https://github.com/apache/incubator-ripple/pull/53>
+
 ## v0.9.29 - May 12, 2015
 
 * RIPPLE-74 Ripple was not passing geolocation info to the app
