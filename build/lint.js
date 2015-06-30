@@ -31,7 +31,7 @@ function _lintCSSCommand(files) {
     var cssDirs = ["assets/client/ripple.css", "lib/client", "assets/server", "test"],
         rules = JSON.parse(fs.readFileSync(_c.ROOT + ".csslintrc", "utf-8")),
         options = ["--errors=" + rules, "--format=compact", "--quiet"];
-    
+
     files = files.length ? files : cssDirs;
     return ["csslint"].concat(options).concat(files).join(" ");
 }
@@ -54,7 +54,7 @@ module.exports = function (files, done) {
         doneCount = 0,
         lintCode = 0,
         lintErrorMessage = "";
-    
+
     function bindEvents(job, command) {
         job.addListener('error', function (msg, code) {
             lintCode++;
