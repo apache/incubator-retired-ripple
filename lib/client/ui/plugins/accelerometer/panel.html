@@ -27,48 +27,45 @@
     </section>
     <section id="accelerometer" class="info ui-widget-content ui-corner-all" style="display: none;">
         <section class="accelerometer-info">
+            <div>
+            <button id="accelerometer-shake" style="position:absolute; right: 10px; top: 180px;" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+            <span class="ui-button-text">Shake</span>
+            </button>
             <canvas style="display: block;" id="accelerometer-canvas" width="300" height="200"></canvas>
+            </div>
 
             <table class="panel-table">
                 <tr>
                     <td colspan="2" style="text-align: center"> 
                         <em>
-                            Click and drag with the mouse to manipulate the device. <br/>
+                            Click and drag with the mouse to manipulate the device.<br/>
                             Hold the Shift key to modify 'alpha'
                         </em>
                     </td>
                 </tr>
                 <tr>
                     <td><label class="ui-text-label" for="accelerometer-x">xAxis:</label></td>
-                    <td><span id="accelerometer-x"></span>m / s^2</td>
+                    <td><span id="accelerometer-x" style="font-weight: bold;"></span>&nbsp;m/s&sup2;</td>
                 </tr>
                 <tr>
                     <td><label class="ui-text-label" for="accelerometer-y">yAxis:</label></td>
-                    <td><span id="accelerometer-y"></span> m / s^2</td>
+                    <td><span id="accelerometer-y" style="font-weight: bold;"></span>&nbsp;m/s&sup2;</td>
                 </tr>
                 <tr>
                     <td><label class="ui-text-label" for="accelerometer-z">zAxis:</label></td>
-                    <td><span id="accelerometer-z"></span> m / s^2</td>
+                    <td><span id="accelerometer-z" style="font-weight: bold;"></span>&nbsp;m/s&sup2;</td>
                 </tr>
                 <tr>
                     <td><label class="ui-text-label" for="accelerometer-alpha">alpha:</label></td>
-                    <td><span id="accelerometer-alpha"></span> deg</td>
+                    <td><span id="accelerometer-alpha" style="font-weight: bold;"></span>&deg;</td>
                 </tr>
                 <tr>
                     <td><label class="ui-text-label" for="accelerometer-beta">beta:</label></td>
-                    <td><span id="accelerometer-beta"></span> deg</td>
+                    <td><span id="accelerometer-beta" style="font-weight: bold;"></span>&deg;</td>
                 </tr>
                 <tr>
                     <td><label class="ui-text-label" for="accelerometer-gamma">gamma:</label></td>
-                    <td><span id="accelerometer-gamma"></span> deg</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button id="accelerometer-shake" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
-                        <span class="ui-button-text">Shake</span>
-                        </button>
-                    </td>
+                    <td><span id="accelerometer-gamma" style="font-weight: bold;"></span>&deg;</td>
                 </tr>
             </table>
         </section>
