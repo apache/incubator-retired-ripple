@@ -18,6 +18,35 @@
 # under the License.
 #
 -->
+
+## v0.9.31 - May 23, 2015
+
+* [RIPPLE-88](https://issues.apache.org/jira/browse/RIPPLE-88) Error in Cordova app with device motion plugin when running under Ripple:
+  <https://github.com/apache/incubator-ripple/pull/62>
+
+* [RIPPLE-89](https://issues.apache.org/jira/browse/RIPPLE-89) Battery Status panel throws an exception if app does not include cordova.js:
+  <https://github.com/apache/incubator-ripple/pull/61>
+
+* [RIPPLE-85](https://issues.apache.org/jira/browse/RIPPLE-85) Button index is incremented twice in notifications:
+  <https://github.com/apache/incubator-ripple/pull/55>
+
+* [RIPPLE-83](https://issues.apache.org/jira/browse/RIPPLE-83) Move where we call Cordova `prepare` so we prepare for the correct platform:
+  <https://github.com/apache/incubator-ripple/pull/52>
+
+* [RIPPLE-91](https://issues.apache.org/jira/browse/RIPPLE-91) Fix gpx file implementation in Geolocation panel:
+  <https://github.com/apache/incubator-ripple/pull/63>
+
+* Improve layout and display of units in Accelerometer panel:
+  <https://github.com/apache/incubator-ripple/pull/66>
+
+* [RIPPLE-93](https://issues.apache.org/jira/browse/RIPPLE-93) Cordova `prepare` doesn't work if cwd isn't in Cordova project.
+  Also, validate command line options, and move where we get a reference to Cordova `prepare` to a later point (so it is after
+  we validate command line options):
+  <https://github.com/apache/incubator-ripple/pull/65>
+
+* [RIPPLE-94](https://issues.apache.org/jira/browse/RIPPLE-94) Fix issues with emulation of Console and Contacts plugins identified by running Mobile Spec: 
+  <https://github.com/apache/incubator-ripple/pull/68>
+
 ## v0.9.30 - May 27, 2015
 
 * RIPPLE-86 Changes to allow Ripple to launch in Internet Explorer and Edge browsers:
