@@ -19,7 +19,17 @@
 #
 -->
 
-## v0.9.31 - May 23, 2015
+## v0.9.32 - August 16, 2015
+
+* [RIPPLE-87](https://issues.apache.org/jira/browse/RIPPLE-87) Ripple can't emulate multi-page applications:
+  <https://github.com/apache/incubator-ripple/pull/71>
+
+* [RIPPLE-95](https://issues.apache.org/jira/browse/RIPPLE-95) Emulate command validates options incorrectly (regression):
+  <https://github.com/apache/incubator-ripple/pull/70>
+
+* There's no such thing as Earl *Gray* Tea! <https://github.com/apache/incubator-ripple/pull/69>
+
+## v0.9.31 - July 23, 2015
 
 * [RIPPLE-88](https://issues.apache.org/jira/browse/RIPPLE-88) Error in Cordova app with device motion plugin when running under Ripple:
   <https://github.com/apache/incubator-ripple/pull/62>
