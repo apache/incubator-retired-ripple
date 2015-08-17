@@ -201,7 +201,7 @@ function computeMd5Hash(filename, baton) {
 }
 
 function computeShaHash(filename, baton) {
-    computeHash(filename, 'sha', 'SHA512', baton);
+    computeHash(filename, 'sha1', 'SHA1', baton);
 }
 
 function computeHash(filename, ext, algo, baton) {
@@ -216,7 +216,8 @@ function computeHash(filename, ext, algo, baton) {
 }
 
 function extractHashFromOutput(output) {
-    return output.slice(output.lastIndexOf(':') + 1).replace(/\s*/g, '').toLowerCase();
+    var pos = output.lastIndexOf(':');
+    return output.slice(pos + 1).replace(/\s*/g, '').toLowerCase() + ' *' + path.basename(output.slice(0, pos));
 }
 
 function exec(cmdLine, baton, callback) {
