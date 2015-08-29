@@ -18,16 +18,16 @@
  * under the License.
  *
  */
-var lint = require('./lint'),
+var colors = require('colors'),
+    lint = require('./lint'),
     build = require('./build'),
-    test = require('./test'),
-    fs = require('fs'),
-    _c = require('./conf'),
-    fail = fs.readFileSync(_c.THIRDPARTY + "fail.txt", "utf-8");
+    test = require('./test');
+
+colors.mode = "console";
 
 function ok(code) {
     if (code !== 0) {
-        process.stdout.write(fail);
+        console.log('Deploy failed.'.red);
         process.exit(code);
     }
 }

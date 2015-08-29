@@ -18,22 +18,22 @@
  * under the License.
  *
  */
-var fs = require('fs'),
+var colors = require('colors'),
     jWorkflow = require('jWorkflow'),
     quotes = require('./quotes'),
     pack = require('./pack'),
     clean = require('./clean'),
-    _c = require('./conf'),
     compress = require('./compress'),
     hosted = require('./targets/hosted');
 
+colors.mode = "console";
+
 function _done(error) {
     if (error) {
-        process.stdout.write(fs.readFileSync(_c.THIRDPARTY + "fail.txt", "utf-8"));
-        process.stdout.write(error);
+        console.log("Build failed: ".red + error.toString().red);
         process.exit(1);
     } else {
-        process.stdout.write(fs.readFileSync(_c.THIRDPARTY + "dredd.txt", "utf-8"));
+        console.log("Build succeeded.".green);
         quotes.random();
         process.exit();
     }
