@@ -20,6 +20,7 @@
  */
 describe("cordova globalization bridge", function () {
     var bridge = ripple('emulatorBridge'),
+        platform = ripple('platform'),
         glob, success, fail;
 
     beforeEach(function () {
@@ -36,6 +37,13 @@ describe("cordova globalization bridge", function () {
         fail = jasmine.createSpy("fail");
 
         spyOn(moment, "lang").andReturn("cv");
+        spyOn(platform, "current").andReturn({
+            device: {
+                globalization: {
+                    locale: { localeName: { "cv": "cv-Chuvash" } }
+                }
+            }
+        });
     });
 
     afterEach(function () {
@@ -43,9 +51,9 @@ describe("cordova globalization bridge", function () {
     });
 
     describe("getLocaleName", function () {
-        it("returns the locale on the success callback", function () {
+        it("returns the localeName string for the momentjs locale", function () {
             glob.getLocaleName(success, fail);
-            expect(success).toHaveBeenCalledWith({value: "cv"});
+            expect(success).toHaveBeenCalledWith({value: "cv-Chuvash"});
         });
 
         it("gets the locale from momentjs", function () {
@@ -60,18 +68,19 @@ describe("cordova globalization bridge", function () {
     });
 
     describe("getPreferredLanguage", function () {
-        var platform = ripple('platform');
-
-        it("returns the options string for the momentjs locale", function () {
-            spyOn(platform, "current").andReturn({
-                device: {
-                    globalization: {
-                        locale: { options: { "cv": "Chuvash" } }
-                    }
-                }
-            });
+        it("returns the localeName string for the momentjs locale", function () {
             glob.getPreferredLanguage(success, fail);
-            expect(success).toHaveBeenCalledWith({value: "Chuvash"});
+            expect(success).toHaveBeenCalledWith({value: "cv-Chuvash"});
+        });
+
+        it("gets the locale from momentjs", function () {
+            glob.getPreferredLanguage(success, fail);
+            expect(moment.lang).toHaveBeenCalledWith();
+        });
+
+        it("doesn't call the fail callback", function () {
+            glob.getPreferredLanguage(success, fail);
+            expect(fail).not.toHaveBeenCalled();
         });
     });
 
